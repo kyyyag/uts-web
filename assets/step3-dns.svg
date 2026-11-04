@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240" fill="none">
+  <rect width="400" height="240" fill="#fefce8" rx="12"/>
+  <rect x="70" y="35" width="260" height="170" rx="10" fill="#ffffff" stroke="#fde047" stroke-width="2"/>
+  <!-- Network Config Card -->
+  <rect x="90" y="55" width="220" height="36" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <circle cx="110" cy="73" r="6" fill="#22c55e"/>
+  <text x="125" y="70" fill="#1e293b" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">IP Otomatis (DHCP)</text>
+  <text x="125" y="83" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">Status: Diberikan Server Kampus</text>
+
+  <rect x="90" y="102" width="220" height="36" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <circle cx="110" cy="120" r="6" fill="#22c55e"/>
+  <text x="125" y="117" fill="#1e293b" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">DNS Otomatis</text>
+  <text x="125" y="130" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">DNS: 10.10.1.1 (Kampus Resolver)</text>
+
+  <rect x="120" y="152" width="160" height="28" rx="6" fill="#ca8a04"/>
+  <text x="200" y="170" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Internet Siap Dipakai</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240" fill="none">
+  <rect width="400" height="240" fill="#eff6ff" rx="12"/>
+  <rect x="70" y="40" width="260" height="160" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  <circle cx="200" cy="90" r="32" fill="#dbeafe"/>
+  <!-- Wi-Fi Waves -->
+  <path d="M172 74 C188 60 212 60 228 74" stroke="#1d4ed8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M180 84 C192 72 208 72 220 84" stroke="#1d4ed8" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="200" cy="96" r="4" fill="#1d4ed8"/>
+  <!-- SSID Box -->
+  <rect x="100" y="140" width="200" height="34" rx="6" fill="#1e40af"/>
+  <text x="200" y="162" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">SSID: AsramaNet-Mahasiswa</text>
+</svg>

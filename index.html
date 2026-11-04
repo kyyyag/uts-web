@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portal Helpdesk Wi-Fi Asrama Mahasiswa - Layanan lapor gangguan jaringan dan informasi panduan koneksi.">
+  <meta name="description" content="Portal Helpdesk Wi-Fi Asrama Mahasiswa Politeknik - Status jaringan AP blok hunian, panduan koneksi, FAQ, dan formulir lapor gangguan online.">
   <title>Portal Helpdesk Wi-Fi Asrama Mahasiswa</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -33,71 +33,147 @@
   <!-- KONTEN UTAMA -->
   <main class="main container">
     <!-- SECTION 1: STATUS JARINGAN -->
-    <section id="status" class="section">
+    <section id="status" class="section" aria-labelledby="status-title">
       <div class="section-header">
-        <h2>Status Jaringan Tiap Blok</h2>
-        <p class="section-desc">Pantau kondisi operasional Access Point (AP) Wi-Fi di seluruh blok hunian asrama.</p>
+        <h2 id="status-title">Status Jaringan Tiap Blok</h2>
+        <p class="section-desc">Pantau kondisi operasional Access Point (AP) Wi-Fi di seluruh blok hunian asrama secara real-time.</p>
       </div>
       <div class="status-grid" id="status-grid">
-        <!-- Kartu status tiap blok (A-D) akan dimuat di sini -->
+        <!-- Blok A -->
+        <article class="status-card">
+          <div class="status-card-header">
+            <h3 class="status-card-title">Blok A (Gedung 1)</h3>
+            <span class="status-badge normal" role="status">● Normal</span>
+          </div>
+          <p class="status-meta">4 AP Aktif • Latensi: 12ms</p>
+          <p class="status-meta">Cakupan sinyal 98% stabil di seluruh lantai 1-4.</p>
+        </article>
+
+        <!-- Blok B -->
+        <article class="status-card">
+          <div class="status-card-header">
+            <h3 class="status-card-title">Blok B (Gedung 2)</h3>
+            <span class="status-badge normal" role="status">● Normal</span>
+          </div>
+          <p class="status-meta">4 AP Aktif • Latensi: 14ms</p>
+          <p class="status-meta">Koneksi prima dan tidak ada kendala laporan massal.</p>
+        </article>
+
+        <!-- Blok C -->
+        <article class="status-card">
+          <div class="status-card-header">
+            <h3 class="status-card-title">Blok C (Gedung 3)</h3>
+            <span class="status-badge maintenance" role="status">▲ Pemeliharaan</span>
+          </div>
+          <p class="status-meta">3 AP Aktif • Latensi: 35ms</p>
+          <p class="status-meta">AP Lantai 2 sedang reboot berkala oleh teknisi.</p>
+        </article>
+
+        <!-- Blok D -->
+        <article class="status-card">
+          <div class="status-card-header">
+            <h3 class="status-card-title">Blok D (Gedung 4)</h3>
+            <span class="status-badge normal" role="status">● Normal</span>
+          </div>
+          <p class="status-meta">4 AP Aktif • Latensi: 11ms</p>
+          <p class="status-meta">Jalur backbone normal dan kapasitas bandwidth lancar.</p>
+        </article>
       </div>
     </section>
 
-    <!-- SECTION 2: PANDUAN KONEKSI -->
-    <section id="panduan" class="section">
+    <!-- SECTION 2: PANDUAN KONEKSI BERGAMBAR -->
+    <section id="panduan" class="section" aria-labelledby="panduan-title">
       <div class="section-header">
-        <h2>Panduan Koneksi Wi-Fi</h2>
-        <p class="section-desc">Ikuti 3 langkah mudah berikut untuk menghubungkan perangkat Anda ke jaringan asrama.</p>
+        <h2 id="panduan-title">Panduan Koneksi Wi-Fi</h2>
+        <p class="section-desc">Ikuti 3 langkah mudah berikut untuk menghubungkan perangkat Anda ke jaringan asrama kampus.</p>
       </div>
       <div class="guide-grid" id="guide-grid">
-        <!-- Langkah panduan bergambar -->
+        <!-- Langkah 1 -->
+        <article class="guide-card">
+          <div class="guide-img-box">
+            <img src="assets/step1-ssid.svg" alt="Ilustrasi layar pengaturan Wi-Fi memilih nama sinyal SSID AsramaNet-Mahasiswa" width="400" height="240" loading="lazy">
+          </div>
+          <div class="guide-content">
+            <p class="guide-step">Langkah 1</p>
+            <h3>Sambungkan ke SSID Asrama</h3>
+            <p>Aktifkan Wi-Fi di ponsel atau laptop Anda, kemudian pilih jaringan bernama <strong>AsramaNet-Mahasiswa</strong> tanpa tanda kunci.</p>
+          </div>
+        </article>
+
+        <!-- Langkah 2 -->
+        <article class="guide-card">
+          <div class="guide-img-box">
+            <img src="assets/step2-login.svg" alt="Ilustrasi formulir captive portal browser dengan kolom isian NIM dan kata sandi SSO" width="400" height="240" loading="lazy">
+          </div>
+          <div class="guide-content">
+            <p class="guide-step">Langkah 2</p>
+            <h3>Autentikasi Akun SSO</h3>
+            <p>Buka peramban (browser) ke halaman <em>login.asrama.ac.id</em>, lalu masukkan Nomor Induk Mahasiswa (NIM) dan kata sandi SSO Anda.</p>
+          </div>
+        </article>
+
+        <!-- Langkah 3 -->
+        <article class="guide-card">
+          <div class="guide-img-box">
+            <img src="assets/step3-dns.svg" alt="Ilustrasi konfigurasi adapter jaringan dengan status IP DHCP dan DNS otomatis aktif" width="400" height="240" loading="lazy">
+          </div>
+          <div class="guide-content">
+            <p class="guide-step">Langkah 3</p>
+            <h3>Pastikan IP & DNS Otomatis</h3>
+            <p>Pastikan adaptor jaringan diatur ke opsi <em>DHCP (Otomatis)</em> agar alamat IP dan server DNS kampus terpasang tanpa bentrok.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- SECTION 3: FAQ -->
-    <section id="faq" class="section">
+    <!-- SECTION 3: FAQ & PENCARIAN (INTERAKSI 2) -->
+    <section id="faq" class="section" aria-labelledby="faq-title">
       <div class="section-header">
-        <h2>Pertanyaan Sering Diajukan (FAQ)</h2>
-        <p class="section-desc">Temukan jawaban cepat seputar kendala koneksi, DNS, dan konfigurasi IP.</p>
+        <h2 id="faq-title">Pertanyaan Sering Diajukan (FAQ)</h2>
+        <p class="section-desc">Ketik pertanyaan atau kata kunci untuk menyaring solusi mandiri terkait koneksi, DNS, dan IP.</p>
       </div>
       <div class="faq-container">
-        <!-- Pencarian FAQ -->
+        <!-- Input Pencarian -->
         <div class="search-box">
-          <label for="faq-search" class="sr-only">Cari pertanyaan atau kata kunci</label>
-          <input type="search" id="faq-search" class="search-input" placeholder="Ketik kata kunci (misal: DNS, IP, putus)..." autocomplete="off">
+          <label for="faq-search" class="sr-only">Cari solusi FAQ berdasarkan kata kunci</label>
+          <input type="search" id="faq-search" class="search-input" placeholder="Ketik kata kunci pencarian (contoh: DNS, IP, lambat, login)..." autocomplete="off">
         </div>
+
+        <!-- Wadah Accordion FAQ -->
         <div id="faq-list" class="faq-list">
-          <!-- Accordion FAQ -->
+          <!-- Item FAQ akan dirender dari data JavaScript -->
         </div>
-        <div id="faq-empty" class="faq-empty" style="display: none;">
-          <p>Pertanyaan tidak ditemukan.</p>
-          <p>Mengalami kendala khusus? Silakan isi <a href="#lapor" class="btn-link">Formulir Lapor Gangguan</a>.</p>
+
+        <!-- Pesan Bila Tidak Ada FAQ yang Cocok -->
+        <div id="faq-empty" class="faq-empty" style="display: none;" role="alert">
+          <p><strong>Pertanyaan atau kata kunci tidak ditemukan.</strong></p>
+          <p>Kendala Anda belum terjawab di atas? Silakan buat laporan langsung di <a href="#lapor" class="btn-link">Formulir Lapor Gangguan</a> di bawah.</p>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 4: FORMULIR LAPOR GANGGUAN -->
-    <section id="lapor" class="section">
+    <!-- SECTION 4: FORMULIR LAPOR GANGGUAN (INTERAKSI 1) -->
+    <section id="lapor" class="section" aria-labelledby="lapor-title">
       <div class="section-header">
-        <h2>Formulir Lapor Gangguan</h2>
-        <p class="section-desc">Laporkan kendala Wi-Fi kamar Anda secara resmi agar segera ditindaklanjuti oleh teknisi.</p>
+        <h2 id="lapor-title">Formulir Lapor Gangguan</h2>
+        <p class="section-desc">Laporkan kendala Wi-Fi kamar Anda secara resmi agar tercatat di antrean penanganan teknisi Unit TI.</p>
       </div>
       <div class="form-wrapper">
         <form id="form-lapor" class="report-form" novalidate>
           <!-- Input Nomor Kamar -->
           <div class="form-group">
             <label for="input-kamar" class="form-label">
-              Nomor Kamar <span class="required">*</span>
-              <span class="hint">(Format: Blok A-D diikuti tanda hubung dan 3 digit angka, cth: A-101, B-204)</span>
+              Nomor Kamar <span class="required" aria-hidden="true">*</span>
+              <span class="hint">(Wajib pola Blok A-D lalu tanda hubung dan 3 angka, cth: A-101, B-204, D-312)</span>
             </label>
-            <input type="text" id="input-kamar" name="kamar" class="form-input" placeholder="Contoh: B-204" required>
+            <input type="text" id="input-kamar" name="kamar" class="form-input" placeholder="Contoh: B-204" required autocomplete="off">
             <span id="error-kamar" class="error-msg" aria-live="polite"></span>
           </div>
 
           <!-- Select Jenis Gangguan -->
           <div class="form-group">
             <label for="select-gangguan" class="form-label">
-              Jenis Gangguan <span class="required">*</span>
+              Jenis Gangguan <span class="required" aria-hidden="true">*</span>
             </label>
             <select id="select-gangguan" name="jenisGangguan" class="form-select" required>
               <option value="">-- Pilih Jenis Gangguan --</option>
@@ -112,13 +188,13 @@
           <!-- Textarea Deskripsi -->
           <div class="form-group">
             <label for="textarea-deskripsi" class="form-label">
-              Deskripsi Gangguan <span class="required">*</span>
-              <span class="hint">(Minimal 20 karakter agar teknisi mudah mendiagnosis masalah)</span>
+              Deskripsi Gangguan <span class="required" aria-hidden="true">*</span>
+              <span class="hint">(Minimal 20 karakter agar teknisi mendapatkan informasi kendala yang jelas)</span>
             </label>
-            <textarea id="textarea-deskripsi" name="deskripsi" class="form-textarea" rows="4" placeholder="Jelaskan detail kendala yang dialami..." required></textarea>
+            <textarea id="textarea-deskripsi" name="deskripsi" class="form-textarea" rows="4" placeholder="Jelaskan kendala secara spesifik (misal: Sinyal muncul 3 bar tetapi tidak bisa membuka portal login)..." required></textarea>
             <div class="char-counter-row">
               <span id="error-deskripsi" class="error-msg" aria-live="polite"></span>
-              <span id="char-counter" class="char-counter">0 / 20 karakter</span>
+              <span id="char-counter" class="char-counter" aria-live="polite">0 / 20 karakter</span>
             </div>
           </div>
 
@@ -127,16 +203,16 @@
       </div>
     </section>
 
-    <!-- SECTION 5: DAFTAR LAPORAN -->
-    <section id="daftar-laporan" class="section">
+    <!-- SECTION 5: DAFTAR LAPORAN (INTERAKSI 1 - BAGIAN STATUS TIKET) -->
+    <section id="daftar-laporan" class="section" aria-labelledby="daftar-title">
       <div class="section-header section-header-split">
         <div>
-          <h2>Daftar Laporan Masuk</h2>
-          <p class="section-desc">Klik lencana status pada laporan untuk memperbarui tahap penanganan.</p>
+          <h2 id="daftar-title">Daftar Laporan Gangguan Masuk</h2>
+          <p class="section-desc">Data tersimpan di <code>localStorage</code>. Klik tombol status untuk mengubah tahap (Baru &rarr; Diproses &rarr; Selesai).</p>
         </div>
         <div class="pending-badge-box">
           <span class="pending-label">Laporan Belum Selesai:</span>
-          <span id="pending-count" class="pending-badge">0</span>
+          <span id="pending-count" class="pending-badge" aria-label="Jumlah laporan belum selesai">0</span>
         </div>
       </div>
       <div id="table-container" class="table-container">
@@ -145,18 +221,18 @@
             <tr>
               <th scope="col">No</th>
               <th scope="col">Kamar</th>
-              <th scope="col">Jenis Gangguan</th>
+              <th scope="col">Jenis</th>
               <th scope="col">Deskripsi</th>
-              <th scope="col">Waktu</th>
-              <th scope="col">Status (Klik untuk ubah)</th>
+              <th scope="col">Waktu Lapor</th>
+              <th scope="col">Status Penanganan (Klik Ubah)</th>
             </tr>
           </thead>
           <tbody id="report-tbody">
-            <!-- Data laporan tersimpan -->
+            <!-- Baris laporan akan dirender lewat script.js -->
           </tbody>
         </table>
         <div id="no-reports" class="empty-state">
-          <p>Belum ada laporan gangguan yang dikirim.</p>
+          <p>Belum ada laporan gangguan yang dikirim. Silakan kirim laporan pertama Anda lewat formulir di atas.</p>
         </div>
       </div>
     </section>
