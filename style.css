@@ -64,6 +64,25 @@ body {
   border: 0;
 }
 
+/* Aksesibilitas: Skip link navigasi keyboard */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #172554;
+  color: #ffffff;
+  padding: 8px 16px;
+  z-index: 999;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 6px 0;
+  transition: top 0.2s ease-in-out;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* Focus styles for keyboard accessibility */
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible {
   outline: 3px solid #2563eb;
