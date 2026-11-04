@@ -48,3 +48,4 @@ Aplikasi web ini menyediakan:
 3. **Slide 3 — Alur Permintaan HTTP:** Siklus peramban saat membuka web: Resolusi DNS &rarr; TCP/TLS Handshake &rarr; HTTP GET Request &rarr; Respon 200 OK &rarr; DOM/CSSOM Rendering, disertai tangkapan layar tab Network.
 4. **Slide 4 — Logika Interaksi JavaScript:** Potongan logika kode Form Validation (Regex & LocalStorage) dan Real-time Filter FAQ, serta skor Aksesibilitas Lighthouse.
 5. **Slide 5 — Jejak AI:** Dokumentasi 3 prompt penting apa adanya, bagian kode yang dihasilkan, serta pengujian dan penyesuaian mandiri yang dilakukan.
+

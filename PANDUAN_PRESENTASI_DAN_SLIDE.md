@@ -143,3 +143,4 @@ Jalankan urutan ini dengan tenang di browser:
    - Tekan `F12` buka Developer Tools &rarr; Tab Network &rarr; Refresh.
    - Tunjukkan status `200 OK` pada `index.html`, `style.css`, dan `script.js`.
    - Ubah sementara nama `<link rel="stylesheet" href="style-salah.css">` di inspect/kode &rarr; Refresh &rarr; Tunjukkan status error `404 Not Found`. Kembalikan ke normal.
+
