@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal Helpdesk Wi-Fi Asrama Mahasiswa - Layanan lapor gangguan jaringan dan informasi panduan koneksi.">
+  <title>Portal Helpdesk Wi-Fi Asrama Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER & NAVIGASI -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">📶</span>
+        <div class="brand-text">
+          <h1>Helpdesk Wi-Fi Asrama</h1>
+          <p class="brand-subtitle">Unit TI Asrama Mahasiswa Politeknik</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Navigasi Utama">
+        <ul class="nav-list">
+          <li><a href="#status" class="nav-link">Status</a></li>
+          <li><a href="#panduan" class="nav-link">Panduan</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#lapor" class="nav-link">Lapor</a></li>
+          <li><a href="#daftar-laporan" class="nav-link">Daftar Laporan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- KONTEN UTAMA -->
+  <main class="main container">
+    <!-- SECTION 1: STATUS JARINGAN -->
+    <section id="status" class="section">
+      <div class="section-header">
+        <h2>Status Jaringan Tiap Blok</h2>
+        <p class="section-desc">Pantau kondisi operasional Access Point (AP) Wi-Fi di seluruh blok hunian asrama.</p>
+      </div>
+      <div class="status-grid" id="status-grid">
+        <!-- Kartu status tiap blok (A-D) akan dimuat di sini -->
+      </div>
+    </section>
+
+    <!-- SECTION 2: PANDUAN KONEKSI -->
+    <section id="panduan" class="section">
+      <div class="section-header">
+        <h2>Panduan Koneksi Wi-Fi</h2>
+        <p class="section-desc">Ikuti 3 langkah mudah berikut untuk menghubungkan perangkat Anda ke jaringan asrama.</p>
+      </div>
+      <div class="guide-grid" id="guide-grid">
+        <!-- Langkah panduan bergambar -->
+      </div>
+    </section>
+
+    <!-- SECTION 3: FAQ -->
+    <section id="faq" class="section">
+      <div class="section-header">
+        <h2>Pertanyaan Sering Diajukan (FAQ)</h2>
+        <p class="section-desc">Temukan jawaban cepat seputar kendala koneksi, DNS, dan konfigurasi IP.</p>
+      </div>
+      <div class="faq-container">
+        <!-- Pencarian FAQ -->
+        <div class="search-box">
+          <label for="faq-search" class="sr-only">Cari pertanyaan atau kata kunci</label>
+          <input type="search" id="faq-search" class="search-input" placeholder="Ketik kata kunci (misal: DNS, IP, putus)..." autocomplete="off">
+        </div>
+        <div id="faq-list" class="faq-list">
+          <!-- Accordion FAQ -->
+        </div>
+        <div id="faq-empty" class="faq-empty" style="display: none;">
+          <p>Pertanyaan tidak ditemukan.</p>
+          <p>Mengalami kendala khusus? Silakan isi <a href="#lapor" class="btn-link">Formulir Lapor Gangguan</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FORMULIR LAPOR GANGGUAN -->
+    <section id="lapor" class="section">
+      <div class="section-header">
+        <h2>Formulir Lapor Gangguan</h2>
+        <p class="section-desc">Laporkan kendala Wi-Fi kamar Anda secara resmi agar segera ditindaklanjuti oleh teknisi.</p>
+      </div>
+      <div class="form-wrapper">
+        <form id="form-lapor" class="report-form" novalidate>
+          <!-- Input Nomor Kamar -->
+          <div class="form-group">
+            <label for="input-kamar" class="form-label">
+              Nomor Kamar <span class="required">*</span>
+              <span class="hint">(Format: Blok A-D diikuti tanda hubung dan 3 digit angka, cth: A-101, B-204)</span>
+            </label>
+            <input type="text" id="input-kamar" name="kamar" class="form-input" placeholder="Contoh: B-204" required>
+            <span id="error-kamar" class="error-msg" aria-live="polite"></span>
+          </div>
+
+          <!-- Select Jenis Gangguan -->
+          <div class="form-group">
+            <label for="select-gangguan" class="form-label">
+              Jenis Gangguan <span class="required">*</span>
+            </label>
+            <select id="select-gangguan" name="jenisGangguan" class="form-select" required>
+              <option value="">-- Pilih Jenis Gangguan --</option>
+              <option value="Lambat">Lambat</option>
+              <option value="Putus-putus">Putus-putus</option>
+              <option value="Tidak bisa login">Tidak bisa login</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+            <span id="error-gangguan" class="error-msg" aria-live="polite"></span>
+          </div>
+
+          <!-- Textarea Deskripsi -->
+          <div class="form-group">
+            <label for="textarea-deskripsi" class="form-label">
+              Deskripsi Gangguan <span class="required">*</span>
+              <span class="hint">(Minimal 20 karakter agar teknisi mudah mendiagnosis masalah)</span>
+            </label>
+            <textarea id="textarea-deskripsi" name="deskripsi" class="form-textarea" rows="4" placeholder="Jelaskan detail kendala yang dialami..." required></textarea>
+            <div class="char-counter-row">
+              <span id="error-deskripsi" class="error-msg" aria-live="polite"></span>
+              <span id="char-counter" class="char-counter">0 / 20 karakter</span>
+            </div>
+          </div>
+
+          <button type="submit" id="btn-submit" class="btn btn-primary">Kirim Laporan Gangguan</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SECTION 5: DAFTAR LAPORAN -->
+    <section id="daftar-laporan" class="section">
+      <div class="section-header section-header-split">
+        <div>
+          <h2>Daftar Laporan Masuk</h2>
+          <p class="section-desc">Klik lencana status pada laporan untuk memperbarui tahap penanganan.</p>
+        </div>
+        <div class="pending-badge-box">
+          <span class="pending-label">Laporan Belum Selesai:</span>
+          <span id="pending-count" class="pending-badge">0</span>
+        </div>
+      </div>
+      <div id="table-container" class="table-container">
+        <table class="report-table">
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Kamar</th>
+              <th scope="col">Jenis Gangguan</th>
+              <th scope="col">Deskripsi</th>
+              <th scope="col">Waktu</th>
+              <th scope="col">Status (Klik untuk ubah)</th>
+            </tr>
+          </thead>
+          <tbody id="report-tbody">
+            <!-- Data laporan tersimpan -->
+          </tbody>
+        </table>
+        <div id="no-reports" class="empty-state">
+          <p>Belum ada laporan gangguan yang dikirim.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 Unit TI Asrama Mahasiswa Politeknik. Portal Helpdesk Wi-Fi Mandiri.</p>
+      <p class="footer-note">Dibuat untuk Ujian Tengah Semester Web Application Development (WAD) Kasus 03.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
