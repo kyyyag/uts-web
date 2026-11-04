@@ -305,7 +305,7 @@ function ambilDaftarLaporan() {
         id: 1710000002,
         kamar: "A-101",
         jenis: "Putus-putus",
-        deskripsi: "Sinyal Wi-Fi sering diskonek otomatis setiap 5 menit sekali di laptop.",
+        deskripsi: "Sinyal Wi-Fi sering tidak tersambung tiba-tiba setiap 5 menit sekali di laptop.",
         waktu: "07:45, 4 Nov",
         status: "Diproses"
       }
