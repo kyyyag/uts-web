@@ -406,7 +406,7 @@ function muatDanTampilkanLaporan() {
       <td><time>${laporan.waktu}</time></td>
       <td>
         <button type="button" class="badge-status-btn ${statusClass}" data-id="${laporan.id}" title="Klik untuk mengubah status laporan">
-          ● ${laporan.status}
+          <span class="status-dot" aria-hidden="true"></span>${laporan.status}
         </button>
       </td>
     `;
@@ -428,10 +428,17 @@ function muatDanTampilkanLaporan() {
 // ==========================================
 // 6. INISIALISASI SAAT HALAMAN SELESAI DIMUAT
 // ==========================================
-document.addEventListener("DOMContentLoaded", function () {
+function inisialisasiHalaman() {
   // 1. Tampilkan seluruh FAQ bawaan
   renderFAQ(faq);
 
   // 2. Tampilkan daftar laporan dari LocalStorage
   muatDanTampilkanLaporan();
-});
+}
+
+// Menjamin eksekusi baik saat loading maupun setelah DOM siap
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", inisialisasiHalaman);
+} else {
+  inisialisasiHalaman();
+}

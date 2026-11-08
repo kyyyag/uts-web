@@ -46,7 +46,9 @@
         <article class="status-card">
           <div class="status-card-header">
             <h3 class="status-card-title">Blok A (Gedung 1)</h3>
-            <span class="status-badge normal" role="status">● Normal</span>
+            <span class="status-badge normal" role="status">
+              <span class="status-dot" aria-hidden="true"></span>Normal
+            </span>
           </div>
           <p class="status-meta">4 AP Aktif • Latensi: 12ms</p>
           <p class="status-meta">Cakupan sinyal 98% stabil di seluruh lantai 1-4.</p>
@@ -56,7 +58,9 @@
         <article class="status-card">
           <div class="status-card-header">
             <h3 class="status-card-title">Blok B (Gedung 2)</h3>
-            <span class="status-badge normal" role="status">● Normal</span>
+            <span class="status-badge normal" role="status">
+              <span class="status-dot" aria-hidden="true"></span>Normal
+            </span>
           </div>
           <p class="status-meta">4 AP Aktif • Latensi: 14ms</p>
           <p class="status-meta">Koneksi prima dan tidak ada kendala laporan massal.</p>
@@ -66,7 +70,9 @@
         <article class="status-card">
           <div class="status-card-header">
             <h3 class="status-card-title">Blok C (Gedung 3)</h3>
-            <span class="status-badge maintenance" role="status">▲ Pemeliharaan</span>
+            <span class="status-badge maintenance" role="status">
+              <span class="status-dot" aria-hidden="true"></span>Pemeliharaan
+            </span>
           </div>
           <p class="status-meta">3 AP Aktif • Latensi: 35ms</p>
           <p class="status-meta">AP Lantai 2 sedang reboot berkala oleh teknisi.</p>
@@ -76,7 +82,9 @@
         <article class="status-card">
           <div class="status-card-header">
             <h3 class="status-card-title">Blok D (Gedung 4)</h3>
-            <span class="status-badge normal" role="status">● Normal</span>
+            <span class="status-badge normal" role="status">
+              <span class="status-dot" aria-hidden="true"></span>Normal
+            </span>
           </div>
           <p class="status-meta">4 AP Aktif • Latensi: 11ms</p>
           <p class="status-meta">Jalur backbone normal dan kapasitas bandwidth lancar.</p>
@@ -144,7 +152,69 @@
 
         <!-- Wadah Accordion FAQ -->
         <div id="faq-list" class="faq-list">
-          <!-- Item FAQ akan dirender dari data JavaScript -->
+          <!-- FAQ 1 (Menyebut DNS #1) -->
+          <details class="faq-item">
+            <summary class="faq-summary">Kenapa Wi-Fi tersambung tapi tidak bisa membuka situs?</summary>
+            <div class="faq-answer">
+              <p>Kemungkinan cache DNS lokal di perangkat Anda bermasalah. Coba buka Command Prompt (CMD) di laptop lalu jalankan perintah <code>ipconfig /flushdns</code>, atau ganti DNS sementara ke DNS kampus (10.10.1.1) atau Cloudflare (1.1.1.1).</p>
+            </div>
+          </details>
+
+          <!-- FAQ 2 (Menyebut IP #1) -->
+          <details class="faq-item">
+            <summary class="faq-summary">Bagaimana cara melihat alamat IP di HP?</summary>
+            <div class="faq-answer">
+              <p>Buka menu Pengaturan (Settings) &gt; Wi-Fi &gt; ketuk tanda 'i' atau ikon roda gigi di sebelah nama Wi-Fi asrama yang terhubung, lalu gulir ke bawah pada bagian 'Alamat IP' (biasanya berformat 10.x.x.x).</p>
+            </div>
+          </details>
+
+          <!-- FAQ 3 (Menyebut DNS #2) -->
+          <details class="faq-item">
+            <summary class="faq-summary">Apa yang harus dilakukan jika muncul galat 'DNS Server Not Responding'?</summary>
+            <div class="faq-answer">
+              <p>Periksa apakah pengaturan DNS adapter jaringan Anda berada pada mode otomatis (DHCP). Jika masih gagal, matikan Wi-Fi selama 10 detik lalu sambungkan kembali untuk memperbarui alokasi DNS server.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 4 (Menyebut IP #2) -->
+          <details class="faq-item">
+            <summary class="faq-summary">Apakah mahasiswa mendapatkan alokasi alamat IP statis atau dinamis?</summary>
+            <div class="faq-answer">
+              <p>Seluruh penghuni asrama mendapatkan alamat IP dinamis secara otomatis dari server DHCP asrama setiap kali perangkat berhasil tersambung ke jaringan.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 5 -->
+          <details class="faq-item">
+            <summary class="faq-summary">Mengapa kecepatan Wi-Fi terasa lambat pada malam hari (20.00 - 23.00)?</summary>
+            <div class="faq-answer">
+              <p>Pada jam tersebut terjadi lonjakan trafik penggunaan (peak hours). Sistem router asrama menerapkan pembagian bandwidth otomatis agar semua kamar tetap mendapatkan akses internet yang adil.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 6 -->
+          <details class="faq-item">
+            <summary class="faq-summary">Berapa batas maksimal perangkat yang boleh terhubung untuk satu akun?</summary>
+            <div class="faq-answer">
+              <p>Satu akun SSO mahasiswa dibatasi maksimal dapat login aktif pada 2 perangkat secara bersamaan (misalnya 1 laptop dan 1 smartphone).</p>
+            </div>
+          </details>
+
+          <!-- FAQ 7 -->
+          <details class="faq-item">
+            <summary class="faq-summary">Bagaimana jika halaman captive portal login tidak otomatis muncul di browser?</summary>
+            <div class="faq-answer">
+              <p>Buka aplikasi peramban web (Chrome, Firefox, atau Edge), lalu ketik manual alamat <code>http://login.asrama.ac.id</code> atau <code>http://neverssl.com</code> di kolom URL untuk memicu pop-up autentikasi.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 8 -->
+          <details class="faq-item">
+            <summary class="faq-summary">Bagaimana cara melapor jika lampu Access Point (AP) di lorong kamar mati?</summary>
+            <div class="faq-answer">
+              <p>Gunakan formulir 'Lapor Gangguan' di portal ini. Masukkan nomor kamar terdekat dari AP yang padam dan deskripsikan bahwa lampu indikator AP di lorong tidak menyala.</p>
+            </div>
+          </details>
         </div>
 
         <!-- Pesan Bila Tidak Ada FAQ yang Cocok -->
